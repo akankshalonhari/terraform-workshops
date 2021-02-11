@@ -14,7 +14,7 @@ variable "my_tuple" {
 }
 
 variable "my_map" {
-  type    = map(list(any))
+  type    = map(list(string))
   default = {
     names : ["John", "Susy", "Harold"],
     ages : [12, 14, 10],

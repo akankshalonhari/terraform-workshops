@@ -8,5 +8,9 @@ provider "aws" {}
 # declare a resource block so we can create something.
 resource "aws_s3_bucket" "student_bucket_alt" {
   bucket = "tf-fundamentals-${var.student_alias}-alt"
+  provider = aws.alternate
 }
-
+provider "aws" {
+  region  = var.region_alt
+  alias   = "alternate"
+}
